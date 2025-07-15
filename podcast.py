@@ -85,7 +85,7 @@ def generate_conversation(script_text, output_file):
     print(f"Podcast saved as: {output_file}")
 
 def main():
-    print("Starting AI Podcast Generation....")
+    print("Starting AI Podcast Generation.....")
     parser = argparse.ArgumentParser(description="Generate a 6-line podcast with AI voices")
     parser.add_argument("--output", default="conversation.wav", help="Output audio file name")
     parser.add_argument("--transcript", default="script.txt", help="File to save the generated script")
