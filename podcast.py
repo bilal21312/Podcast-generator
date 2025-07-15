@@ -66,6 +66,10 @@ def speech_to_text(text, voice_id, file_name):
 def generate_conversation(script_text, output_file):
     print("\nParsing script and generating audio...")
     lines = [line.strip() for line in script_text.strip().split('\n') if line.strip()]
+    
+    if len(lines) != 6:
+        raise ValueError(f"Error: Expected exactly 6 lines, but got {len(lines)}.")
+
     audio_segments = []
 
     for i, line in enumerate(lines):
@@ -78,7 +82,7 @@ def generate_conversation(script_text, output_file):
 
     final_audio = sum(audio_segments)
     final_audio.export(output_file, format="wav")
-    print(f"Final podcast saved as: {output_file}")
+    print(f"Podcast saved as: {output_file}")
 
 def main():
     print("Starting AI Podcast Generation....")
