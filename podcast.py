@@ -68,7 +68,7 @@ def generate_conversation(script_text, output_file):
     lines = [line.strip() for line in script_text.strip().split('\n') if line.strip()]
     
     if len(lines) != 6:
-        raise ValueError(f"Error:Expected exactly 6 lines, but got {len(lines)}.")
+        raise ValueError(f"Error:Expected exactly 6 lines,but got {len(lines)}.")
 
     audio_segments = []
 
