@@ -1,3 +1,10 @@
-python-version/
-.env
 podcastenv/
+venv/
+.env
+*.wav
+*.mp3
+*.txt
+!requirements.txt
+!README.md
+__pycache__/
+*.pyc
